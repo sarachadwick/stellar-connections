@@ -1,6 +1,5 @@
 ## stellar-connections
 
-=======
 Stellar Connections dreams of being a svelte/typescript tutorial, similar to the [main svelte tutorial](https://learn.svelte.dev/tutorial/welcome-to-svelte).
 This is a big project and I am but a simple mid-level, so we're doing a lot of experimentation here.
 
