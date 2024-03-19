@@ -1,5 +1,14 @@
-# stellar-connections
+### stellar-connections
 =======
+Stellar Connections dreams of being a svelte/typescript tutorial, similar to the [main svelte tutorial](https://learn.svelte.dev/tutorial/welcome-to-svelte).
+This is a big project and I am but a simple mid-level, so we're doing a lot of experimentation here.
+
+# Done
+  - CodeMirror editor with svelte support
+# To Do
+  - StackBlitz with WebContainers
+
+### Some setup tips I don't want to delete yet
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
