@@ -1,12 +1,11 @@
 <script lang="ts">
   import { browser } from "$app/environment";
 
-  export let iframeSrc = "";
+  export let iframeSrc: string = "";
   export let svelteCheckOutcome: number = 1;
   let iframe: HTMLIFrameElement;
 
   $: if (iframe) iframe.src = iframeSrc;
-  $: console.log("svelte check outcome", svelteCheckOutcome);
 </script>
 
 <div class="content">
@@ -30,7 +29,6 @@
     min-height: 0;
     height: 100%;
     max-height: 100%;
-    background: var(--sk-back-2);
     --menu-width: 5.4rem;
   }
 
@@ -41,6 +39,5 @@
     resize: none;
     box-sizing: border-box;
     border: none;
-    background: var(--sk-back-2);
   }
 </style>

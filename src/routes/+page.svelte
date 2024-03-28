@@ -3,20 +3,12 @@
   import title from "$lib/assets/Title.png";
 </script>
 
-<nav>
-  <a href="/">home</a>
-</nav>
-
-<div style="display:flex;flex-direction:column;align-items:center;">
+<div class="title-display">
   <img src={title} alt="logo" style="width: 40vw" />
 
-  <div style="display:flex;justify-content:center;align-items:center;">
-    <img
-      src={alienGirl}
-      alt="alien girl protagonist"
-      style="max-height:400px;"
-    />
-    <div style="max-width:300px;">
+  <div class="home-display">
+    <img src={alienGirl} alt="alien girl protagonist" class="alien-girl" />
+    <div class="problem-statement">
       <p>
         A bunch of Svelte settlers have come the wild and untamed moon of
         Typescript. The settlers are excited to begin building a new Svelte hab
@@ -35,3 +27,24 @@
     </div>
   </div>
 </div>
+
+<style>
+  .title-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-display {
+    display: flex;
+    align-items: center;
+  }
+
+  .alien-girl {
+    max-height: 40vh;
+  }
+
+  .problem-statement {
+    max-width: 30vw;
+  }
+</style>

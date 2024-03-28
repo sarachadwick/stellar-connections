@@ -9,13 +9,14 @@
   /** @type {import('@webcontainer/api').WebContainer}  */
   let webcontainer: WebContainer;
 
-  let iframeSrc = "";
+  let iframeSrc: string = "";
+  let svelteCheckOutcome: number = 1;
+
   let xterm: any;
   let fitAddonLibrary: any;
   let terminal: any;
-  let svelteCheckOutcome: number = 1;
 
-  async function installDependencies() {
+  async function installDependencies(): Promise<number> {
     const installProcess = await webcontainer.spawn("npm", ["install"]);
     installProcess.output.pipeTo(
       new WritableStream({
@@ -27,7 +28,7 @@
     return installProcess.exit;
   }
 
-  async function doCompile() {
+  async function doCompile(): Promise<number> {
     const compileProcess = await webcontainer.spawn("npm", ["run", "dev"]);
     compileProcess.output.pipeTo(
       new WritableStream({
@@ -44,12 +45,12 @@
     return compileProcess.exit;
   }
 
-  async function writeIndexJS(content: any) {
+  async function writeIndexJS(content: any): Promise<void> {
     if (!webcontainer) return;
     await webcontainer.fs.writeFile("/App.svelte", content);
   }
 
-  async function svelteCheck() {
+  async function svelteCheck(): Promise<void> {
     const svelteCheckProcess = await webcontainer.spawn("npm", [
       "run",
       "check",
@@ -65,6 +66,7 @@
   }
 
   onMount(async () => {
+    // Load terminal
     xterm = await import("xterm");
     fitAddonLibrary = await import("@xterm/addon-fit");
     terminal = new xterm.Terminal({
@@ -75,6 +77,7 @@
     terminal.open(document.getElementById("terminal"));
     fitAddon.fit();
 
+    // Boot webcontainer
     webcontainer = await WebContainer.boot();
     await webcontainer.mount(files);
 
@@ -90,16 +93,10 @@
   });
 </script>
 
-<nav>
-  <a href="/">home</a>
-</nav>
-
 <h1>The case of the mysterious malformed data</h1>
 
 <div style="display: flex;">
-  <section
-    style="display: flex; flex-direction:column;padding-left:2rem;padding-right:2rem;padding-bottom:2rem;max-width:300px;"
-  >
+  <section class="problem-statement">
     <p>
       The Svelte settlers are building a moonbase computer. As we all know,
       computers are made of zeros and ones.
@@ -130,3 +127,14 @@
   </section>
 </div>
 <div id="terminal" style="height:200px;"></div>
+
+<style>
+  .problem-statement {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    max-width: 300px;
+  }
+</style>

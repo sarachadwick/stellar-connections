@@ -1,4 +1,11 @@
-body { background-color: #1d0e1f; color: #f7f7f7; font-family: 'Arial', sans-serif; }
+body {
+  background-color: #1d0e1f;
+  color: #f7f7f7;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 a { color: #dacf56; text-decoration: none; }
 
@@ -9,3 +16,25 @@ h1, h2, h3, h4, h5, h6 { color: #8d3053; }
 p { color: #b668a4; }
 
 button { background-color: #573776; color: #f7f7f7; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+
+
+nav {
+  background-color: #573776;
+  padding: 10px 20px;
+  display: flex;
+}
+
+nav a {
+  color: #f7f7f7;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  color: #bd93f9;
+}
+
+button:hover {
+  background-color: #bd93f9;
+}
