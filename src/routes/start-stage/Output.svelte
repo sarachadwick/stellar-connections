@@ -2,14 +2,23 @@
   import { browser } from "$app/environment";
 
   export let iframeSrc = "";
+  export let svelteCheckOutcome: number = 1;
   let iframe: HTMLIFrameElement;
 
   $: if (iframe) iframe.src = iframeSrc;
+  $: console.log("svelte check outcome", svelteCheckOutcome);
 </script>
 
 <div class="content">
-  {#if browser}
-    <iframe bind:this={iframe} title="Output" />
+  {#if svelteCheckOutcome !== 1}
+    {#if browser}
+      <iframe bind:this={iframe} title="Output" />
+    {/if}
+  {:else}
+    <div style="display: flex; align-items: center;flex-direction:column;">
+      <h2>Oh no it's all broken!</h2>
+      <p>Beep boop the computers are full of strings</p>
+    </div>
   {/if}
 </div>
 

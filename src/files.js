@@ -51,11 +51,13 @@ app.listen(port, () => {
         "scripts": {
           "dev": "vite",
           "build": "vite build",
-          "preview": "vite preview"
+          "preview": "vite preview",
+          "check": "svelte-check --tsconfig ./tsconfig.json"
         },
         "devDependencies": {
           "@sveltejs/vite-plugin-svelte": "^3.0.2",
           "@tsconfig/svelte": "^5.0.2",
+          "svelte-check": "^3.6.7",
           "tslib": "^2.6.2",
           "typescript": "^5.2.2",
           "svelte": "^4.2.12",
@@ -137,7 +139,7 @@ app.listen(port, () => {
           "checkJs": true,
           "isolatedModules": true
         },
-        "include": ["*.ts", "*.js", "*.svelte"],
+        "include": ["*.svelte"],
         "references": [{ "path": "./tsconfig.node.json" }]
       }
       `
