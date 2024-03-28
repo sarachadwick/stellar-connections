@@ -1,0 +1,33 @@
+.codemirror-wrapper {
+	height: 100%;
+}
+
+.cm-editor {
+	height: 100%;
+  max-height: 350px;
+  color: "white";
+  background-color: "#034"
+}
+
+.cm-editor .cm-scroller {
+  overflow: scroll;
+  min-height: 350px;
+}
+
+&: {
+
+},
+.cm-content: {
+  caretColor: "#0e9"
+},
+&.cm-focused .cm-cursor: {
+  borderLeftColor: "#0e9"
+},
+&.cm-focused .cm-selectionBackground, ::selection: {
+  backgroundColor: "#074"
+},
+.cm-gutters: {
+  backgroundColor: "#045",
+  color: "#ddd",
+  border: "none"
+}
