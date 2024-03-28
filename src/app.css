@@ -1,15 +1,11 @@
-/* body {
-  background-color: #29050e;
-} */
+body { background-color: #1d0e1f; color: #f7f7f7; font-family: 'Arial', sans-serif; }
 
-/* a {
-  color: #dacf56;
-}
+a { color: #dacf56; text-decoration: none; }
 
-h1 {
-  color: #b668a4;
-}
+a:hover { color: #bd93f9; }
 
-p {
-  color: #e66f93;
-} */
+h1, h2, h3, h4, h5, h6 { color: #8d3053; }
+
+p { color: #b668a4; }
+
+button { background-color: #573776; color: #f7f7f7; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }

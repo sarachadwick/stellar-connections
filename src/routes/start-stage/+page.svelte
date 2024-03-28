@@ -98,7 +98,7 @@
 
 <div style="display: flex;">
   <section
-    style="display: flex; flex-direction:column;padding-left:2rem;padding-right:2rem;max-width:300px;"
+    style="display: flex; flex-direction:column;padding-left:2rem;padding-right:2rem;padding-bottom:2rem;max-width:300px;"
   >
     <p>
       The Svelte settlers are building a moonbase computer. As we all know,
@@ -114,10 +114,10 @@
       numerical veins!
     </p>
     <p>
-      Add a <b>TYPE</b> of `number`` of the variable `binaryDigits` to save the settlers
-      computers!
+      Add a number value to binaryDigits (which has a <b>TYPE</b> of `number`) and
+      then click "Go Go Type Check" to save the settlers computers!
     </p>
-    <button on:click={svelteCheck}>Go go type check</button>
+    <button on:click={svelteCheck}>Go Go Type Check</button>
   </section>
   <section style="flex-grow: 1;">
     <Editor
@@ -129,4 +129,4 @@
     <Output bind:iframeSrc {svelteCheckOutcome} />
   </section>
 </div>
-<div id="terminal" style="height:50%;"></div>
+<div id="terminal" style="height:200px;"></div>

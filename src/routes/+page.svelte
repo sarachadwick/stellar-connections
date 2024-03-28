@@ -19,12 +19,18 @@
     <div style="max-width:300px;">
       <p>
         A bunch of Svelte settlers have come the wild and untamed moon of
-        Typescript. The settlers are excited to begin building a new Svelte hab to share with the native typescript inhabitants.
+        Typescript. The settlers are excited to begin building a new Svelte hab
+        to share with the native typescript inhabitants.
       </p>
-			<p>
-				There's a problem though! Typescript has a lot of powerful natural resources, but you can only use them to build your Svelte components if you know how to use them.
-			</p>
-			<p>It's up to the Typescript aliens to teach the Svelte settlers to use their tools if they're all going to coexist in harmony!</p>
+      <p>
+        There's a problem though! Typescript has a lot of powerful natural
+        resources, but you can only use them to build your Svelte components if
+        you know how to use them.
+      </p>
+      <p>
+        It's up to the Typescript aliens to teach the Svelte settlers to use
+        their tools if they're all going to coexist in harmony!
+      </p>
       <p>Wanna help? <a href="/start-stage">Start here</a>!</p>
     </div>
   </div>

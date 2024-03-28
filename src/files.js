@@ -23,6 +23,12 @@ app.listen(port, () => {
       <!doctype html>
       <html lang="en">
         <head>
+        <style>
+        body { background-color: #1d0e1f; color: #f7f7f7; font-family: 'Arial', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { color: #8d3053; }
+
+        p { color: #b668a4; }
+        </style>
         </head>
         <body>
           <div id="app"></div>
@@ -34,10 +40,11 @@ app.listen(port, () => {
   'App.svelte': {
     file: {
       contents: `<script lang="ts">
-  let name:number = 'world';
+  let binaryDigits:number = 'world';
 </script>
 
-<h1>Hello {name}!</h1>`,
+<h1>The computer is working now!</h1>
+<p>Beep Boop: {binaryDigits}</p>`,
     },
   },
   'package.json': {
